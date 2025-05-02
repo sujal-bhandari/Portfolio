@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-primary text-textPrimary font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+  
+  /* Light Theme Styles */
+  html.light-theme body {
+    @apply bg-gray-50 text-gray-900;
+  }
+  
+  html.light-theme .bg-primary {
+    @apply bg-gray-50;
+  }
+  
+  html.light-theme .bg-primary\/50 {
+    @apply bg-gray-100;
+  }
+  
+  html.light-theme .bg-primary\/80 {
+    @apply bg-white;
+  }
+  
+  html.light-theme .bg-primary\/20 {
+    @apply bg-gray-50;
+}
+
+  html.light-theme .text-textPrimary {
+    @apply text-gray-900;
+  }
+  
+  html.light-theme .text-textSecondary {
+    @apply text-gray-600;
+}
+  
+  html.light-theme .border-textSecondary\/10 {
+    @apply border-gray-200;
+}
+
+  html.light-theme .bg-secondary\/10 {
+    @apply bg-teal-50;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+  .btn {
+    @apply inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md shadow-sm transition-all duration-300;
+}
+
+  .btn-primary {
+    @apply btn bg-secondary text-primary hover:bg-opacity-90;
+}
+
+  .btn-outline {
+    @apply btn border-secondary text-secondary hover:bg-secondary hover:bg-opacity-10;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-6 text-textPrimary;
+  }
+
+  .section-subtitle {
+    @apply text-xl text-textSecondary mb-12 max-w-2xl;
+  }
+}
